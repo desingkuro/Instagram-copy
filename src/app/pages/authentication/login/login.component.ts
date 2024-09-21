@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InstagramService } from '../../../shared/service/auth/instagram.service';
 
 @Component({
   selector: 'app-login',
@@ -8,12 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+
     typeInput:boolean = false;
     textBtnPassword:string = 'Mostrar'
-    user = {
-      email:'',
-      password:''
-    }
+    
+    constructor(
+      private intagramServvice:InstagramService
+    ){}
 
     changeType(){
       if(this.typeInput){
@@ -26,11 +28,11 @@ export class LoginComponent {
     handleSubmit(event: Event): void {
       event.preventDefault();
       const { email, password } = this.getData(event);
-  
-      this.user.email = JSON.stringify(email);
-      this.user.password = JSON.stringify(password);
-  
-      this.validateForm();
+      const user = JSON.stringify(email);
+      const passW = JSON.stringify(password)
+      if(this.validateForm(user,passW)){
+        this.intagramServvice.loginUser(user,passW);
+      }
     }
   
     getData(event: Event) {
@@ -40,12 +42,10 @@ export class LoginComponent {
       return { email, password };
     }
     
-    validateForm() {
-      if (this.user.email && this.user.password) {
-        //console.log(this.user.email);
-        //console.log(this.user.password);
-      } else {
-        console.error('Email o contraseña no pueden estar vacíos');
+    validateForm(user:string,password:string):boolean {
+      if (user && password) {
+        return true;
       }
+      return false
     }
 }

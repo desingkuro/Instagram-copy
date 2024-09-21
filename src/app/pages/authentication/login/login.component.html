@@ -22,13 +22,13 @@
           <img src="logo.png" alt="logo instagram" />
         </picture>
       </header>
-      <form action="" class="main__item-form">
+      <form action="" (submit)="handleSubmit($event)" class="main__item-form">
         <fieldset>
             <input
             type="text"
-            id="userName"
             class="main__item-form-input"
             placeholder="Teléfono, usuario o correo electrónico"
+            name="email"
             />
             <label for="userName" class="main__item-form-label label-userName">
               Teléfono, usuario o correo electrónico
@@ -37,13 +37,14 @@
         <fieldset>
             <input
             class="main__item-form-input"
-            type="text"
-            id="userName"
+            [type]="typeInput?'text':'password'"
             placeholder="Contraseña"
+            name="password"
             />
             <label for="userName" class="main__item-form-label label-password">
               Contraseña
             </label>
+            <button type="button"  class="main__item-form-input-btn" (click)="changeType()">{{typeInput?'Ocultar':'Mostrar'}}</button>
         </fieldset>
         <button class="main__item-form-btn" type="submit">
           Iniciar Sesión

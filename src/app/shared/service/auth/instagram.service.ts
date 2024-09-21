@@ -1,6 +1,10 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Friend, friends } from '../../interfaces/friends';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import * as data from '../../../../assets/api/date.json'
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +12,9 @@ import { Router } from '@angular/router';
 export class InstagramService {
   private admin:string = "admin123"
   private password:string = "admin2024"
+  private jsonData:any;
   
-  constructor(private router:Router) { }
+  constructor(private router:Router, private http: HttpClient) { }
 
   loginUser(userName: string, password: string){
     const user = JSON.stringify(this.admin);
@@ -29,5 +34,6 @@ export class InstagramService {
   }
 
   getFriendsUser(){
+    return data.friends
   }
 }

@@ -1,0 +1,114 @@
+{
+  "friends": [
+    {
+      "name": "CarlosGomez",
+      "profile_picture": "https://via.placeholder.com/60",
+      "story": {
+        "image": "https://via.placeholder.com/600",
+        "caption": "Un día perfecto en la playa"
+      },
+      "posts": [
+        {
+          "image": "https://via.placeholder.com/600",
+          "likes": 120,
+          "comments": 15,
+          "caption": "Disfrutando del atardecer en las montañas"
+        },
+        {
+          "image": "https://via.placeholder.com/600",
+          "likes": 85,
+          "comments": 9,
+          "caption": "Excursión por el bosque"
+        }
+      ]
+    },
+    {
+      "name": "LuciaMartinez",
+      "profile_picture": "https://via.placeholder.com/60",
+      "story": {
+        "image": "https://via.placeholder.com/600",
+        "caption": "Café y buena compañía ☕️"
+      },
+      "posts": [
+        {
+          "image": "https://via.placeholder.com/600",
+          "likes": 150,
+          "comments": 20,
+          "caption": "Día de picnic en el parque 🌳"
+        },
+        {
+          "image": "https://via.placeholder.com/600",
+          "likes": 98,
+          "comments": 12,
+          "caption": "Atardecer desde la azotea"
+        }
+      ]
+    },
+    {
+      "name": "MiguelPerez",
+      "profile_picture": "https://via.placeholder.com/60",
+      "story": {
+        "image": "https://via.placeholder.com/600",
+        "caption": "Listo para el partido ⚽"
+      },
+      "posts": [
+        {
+          "image": "https://via.placeholder.com/600",
+          "likes": 110,
+          "comments": 13,
+          "caption": "Ganamos el partido de hoy 💪"
+        },
+        {
+          "image": "https://via.placeholder.com/600",
+          "likes": 65,
+          "comments": 7,
+          "caption": "Preparando la estrategia para el próximo juego"
+        }
+      ]
+    },
+    {
+      "name": "AnaRodriguez",
+      "profile_picture": "https://via.placeholder.com/60",
+      "story": {
+        "image": "https://via.placeholder.com/600",
+        "caption": "Un día relajante en el spa 💆‍♀️"
+      },
+      "posts": [
+        {
+          "image": "https://via.placeholder.com/600",
+          "likes": 132,
+          "comments": 18,
+          "caption": "Día de descanso total"
+        },
+        {
+          "image": "https://via.placeholder.com/600",
+          "likes": 92,
+          "comments": 10,
+          "caption": "El mejor masaje de mi vida"
+        }
+      ]
+    },
+    {
+      "name": "DavidLopez",
+      "profile_picture": "https://via.placeholder.com/60",
+      "story": {
+        "image": "https://via.placeholder.com/600",
+        "caption": "Preparándome para la carrera 🚴‍♂️"
+      },
+      "posts": [
+        {
+          "image": "https://via.placeholder.com/600",
+          "likes": 140,
+          "comments": 16,
+          "caption": "Entrenamiento antes de la competencia"
+        },
+        {
+          "image": "https://via.placeholder.com/600",
+          "likes": 75,
+          "comments": 9,
+          "caption": "Listo para darlo todo en la carrera"
+        }
+      ]
+    }
+  ]
+}

@@ -31,7 +31,7 @@ main {
     width: 100%;
 }
 
-.stories, .post {
+.stories{
     background-color: #fff;
     border: 1px solid #dbdbdb;
     border-radius: 5px;
@@ -55,62 +55,24 @@ main {
     border: 2px solid #ff8501;
 }
 
-.post-header {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-
-.post-header img {
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    margin-right: 10px;
-}
-
-.post-image {
-    width: 100%;
-}
-
-.post-actions {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.post-actions img {
-    height: 25px;
-    cursor: pointer;
-}
-
-.post-likes {
-    padding: 0 10px;
-}
-
-.post-comments {
-    padding: 0 10px;
-    font-size: 14px;
-    color: #8e8e8e;
-}
-
 aside {
     margin-left: 40px;
     width: 300px;
 }
 
-.profile-info {
+.profile__info {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.profile-info img {
+.profile__info img {
     border-radius: 50%;
     height: 60px;
     margin-right: 10px;
 }
 
-.profile-info .profile-details {
+.profile__info .profile__details {
     display: flex;
     flex-direction: column;
 }

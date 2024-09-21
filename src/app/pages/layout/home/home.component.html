@@ -2,14 +2,13 @@
   <section>
     <aside>
       <img src="instagramLogo.svg" alt="logo instagram" />
-      <div class="nav-links">
+      <div class="nav__links">
         <div>
           <img
             src="https://img.icons8.com/material-outlined/24/000000/home--v2.png"
             alt="Home"
           />
         </div>
-
         <div>
           <img
             src="https://img.icons8.com/material-outlined/24/000000/compass.png"
@@ -34,57 +33,24 @@
     <main>
       <div class="feed">
         <header class="stories">
-          <div class="story">
-            <img src="https://via.placeholder.com/60" alt="Story" />
-            <p>Tu Historia</p>
-          </div>
-          <div class="story">
-            <img src="https://via.placeholder.com/60" alt="Story" />
-            <p>Amigo 1</p>
-          </div>
-          <div class="story">
-            <img src="https://via.placeholder.com/60" alt="Story" />
-            <p>Amigo 2</p>
-          </div>
-          <div class="story">
-            <img src="https://via.placeholder.com/60" alt="Story" />
-            <p>Amigo 3</p>
-          </div>
+          <app-storie/>
         </header>
-
-        <div class="post">
-          <div class="post-header">
-            <img src="https://via.placeholder.com/40" alt="User Profile" />
-            <p>Usuario</p>
-          </div>
-          <img
-            class="post-image"
-            src="https://via.placeholder.com/600"
-            alt="Post Image"
-          />
-          <div class="post-actions">
-            <img
-              src="https://img.icons8.com/material-outlined/24/000000/like--v1.png"
-              alt="Like"
+        @for (friend of friendsList; track friend.name) { @for (post of
+        friend.posts; track post.caption) {
+            <app-post
+            [coments]="post.comments"
+            [likes]="post.likes"
+            [img]="post.image"
+            [userName]="friend.name"
+            [imgUser]="friend.profile_picture"
             />
-            <img
-              src="https://img.icons8.com/material-outlined/24/000000/speech-bubble--v1.png"
-              alt="Comment"
-            />
-            <img
-              src="https://img.icons8.com/material-outlined/24/000000/paper-plane--v1.png"
-              alt="Share"
-            />
-          </div>
-          <p class="post-likes">1,000 Me gusta</p>
-          <p class="post-comments">Ver los 200 comentarios</p>
-        </div>
+        } }
       </div>
     </main>
     <aside>
-      <div class="profile-info">
+      <div class="profile__info">
         <img src="https://via.placeholder.com/60" alt="User Profile" />
-        <div class="profile-details">
+        <div class="profile__details">
           <p><strong>usuario_actual</strong></p>
           <p>Nombre de Usuario</p>
         </div>

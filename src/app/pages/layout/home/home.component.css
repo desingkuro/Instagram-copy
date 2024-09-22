@@ -16,18 +16,28 @@ section {
 .nav{
   display: flex;
   flex-direction: column;
-  gap: 20px;
   height: 100vh;
   padding-top: 10px;
   margin-left: 10px;
   justify-content: start;
   border-right: #d6d6d6 1px solid;
 }
+
+.nav-logo{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.nav-logo svg{
+  height: 60px;
+}
+
 .nav__links {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   padding: 10px;
 }
@@ -78,9 +88,6 @@ main {
   min-height: 100px;
   display: flex;
   padding: 10px;
-  background-color: #fff;
-  border: 1px solid #dbdbdb;
-  border-radius: 5px;
   margin-bottom: 20px;
   overflow: hidden;
   overflow-x: scroll;
@@ -117,9 +124,6 @@ aside {
 }
 
 .suggestions {
-  background-color: #fff;
-  border: 1px solid #dbdbdb;
-  border-radius: 5px;
   padding: 10px;
 }
 .suggestions p{

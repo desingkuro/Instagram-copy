@@ -3,6 +3,8 @@
     border: 1px solid #dbdbdb;
     border-radius: 5px;
     margin-bottom: 20px;
+    padding-bottom: 20px;
+    max-width: 500px;
 }
 .post-header {
     display: flex;
@@ -23,7 +25,7 @@
 
 .post-actions {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 10px;
 }
 

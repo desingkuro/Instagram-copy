@@ -1,35 +1,60 @@
 <body>
-  <section>
-    <aside>
-      <img src="instagramLogo.svg" alt="logo instagram" />
-      <div class="nav__links">
-        <div>
-          <img
-            src="https://img.icons8.com/material-outlined/24/000000/home--v2.png"
-            alt="Home"
-          />
-        </div>
-        <div>
-          <img
-            src="https://img.icons8.com/material-outlined/24/000000/compass.png"
-            alt="Explore"
-          />
-        </div>
-        <div>
-          <img
-            src="https://img.icons8.com/material-outlined/24/000000/like.png"
-            alt="Notifications"
-          />
-        </div>
-        <div>
-          <img
-            src="https://img.icons8.com/material-outlined/24/000000/user.png"
-            alt="Profile"
-          />
-        </div>
+  <aside class="nav">
+    <img src="instagramLogo.svg" alt="logo instagram" />
+    <div class="nav__links">
+      <div>
+        <img
+          src="https://img.icons8.com/material-outlined/24/000000/home--v2.png"
+          alt="Home"
+        />
+        <span>Inicio</span>
       </div>
-    </aside>
-
+      <div>
+        <img
+          src="https://img.icons8.com/material-outlined/24/000000/compass.png"
+          alt="Explore"
+        />
+        <span>Buscar</span>
+      </div>
+      <div>
+        <img
+          src="https://img.icons8.com/material-outlined/24/000000/search.png"
+          alt="Explorar"
+        />
+        <span>Explorar</span>
+      </div>
+      <div>
+        <img
+          src="https://img.icons8.com/material-outlined/24/000000/film-reel.png"
+          alt="Reels"
+        />
+        <span>Reels</span>
+      </div>
+      <div>
+        <img
+          src="https://img.icons8.com/material-outlined/24/000000/speech-bubble.png"
+          alt="Mensajes"
+        />
+        <span>Mensajes</span>
+      </div>
+      <div>
+        <img
+          src="https://img.icons8.com/material-outlined/24/000000/appointment-reminders.png"
+          alt="Notificaciones"
+        />
+        <span>Notificaciones</span>
+      </div>
+      <div class="nav__links-profile">
+        <img src="https://avatars.githubusercontent.com/u/100732408?v=4&size=60" alt="perfil">
+        <span>Perfil</span>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/material-outlined/24/000000/menu.png" alt="perfil">
+        <span>Perfil</span>
+      </div>
+    </div>
+  </aside>
+  <section>
     <main>
       <div class="feed">
         <header class="stories">
@@ -52,7 +77,10 @@
 
     <aside>
       <div class="profile__info">
-        <img src="https://via.placeholder.com/60" alt="User Profile" />
+        <img
+          src="https://avatars.githubusercontent.com/u/100732408?v=4&size=60"
+          alt="User Profile"
+        />
         <div class="profile__details">
           <p><strong>Anmalima</strong></p>
           <p>Andres Licona</p>
@@ -62,13 +90,12 @@
       <div class="suggestions">
         <p>Sugerencias para ti</p>
         @for (friend of friendsList; track $index) {
-        <app-suggestion [img]="friend.profile_picture" [name]="friend.name"/>
+        <app-suggestion [img]="friend.profile_picture" [name]="friend.name" />
         }
       </div>
+      <footer class="footer">
+        <p>&copy; 2024 Instagram</p>
+      </footer>
     </aside>
   </section>
-
-  <footer class="footer">
-    <p>&copy; 2024 Instagram</p>
-  </footer>
 </body>

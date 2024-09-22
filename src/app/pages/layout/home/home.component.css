@@ -2,36 +2,80 @@ body {
   font-family: Arial, sans-serif;
   background-color: #fafafa;
   color: #333;
+  display: flex;
 }
 
 section {
   display: flex;
   width: 100%;
-  height: 100%;
+  overflow: hidden;
+  height: 100vh;
+  overflow-y: visible;
+  justify-content: center;
 }
-
-.nav-links {
+.nav{
   display: flex;
+  flex-direction: column;
   gap: 20px;
+  height: 100vh;
+  padding-top: 10px;
+  margin-left: 10px;
+  justify-content: start;
+  border-right: #d6d6d6 1px solid;
+}
+.nav__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
 }
 
-.nav-links img {
+.nav__links div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  transition: all ease-in-out .3s;
+  border-radius: 10px;
+  height: 55px;
+  padding:5px;
+}
+.nav__links div:hover{
+  background-color: #e4e4e4;
+}
+
+.nav__links img {
   height: 25px;
   cursor: pointer;
+}
+.nav__links span {
+  font-weight: 700;
+}
+.nav__links-profile img{
+  height: 25px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 main {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .feed {
-  max-width: 600px;
-  width: 100%;
+  width: 630px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .stories {
+  min-height: 100px;
   display: flex;
   padding: 10px;
   background-color: #fff;
@@ -42,6 +86,8 @@ main {
   overflow-x: scroll;
   scrollbar-width: none; /* Para Firefox */
   -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+  width: 100%;
+  
 }
 .stories::-webkit-scrollbar {
   display: none; /* Para Chrome, Safari y Opera */

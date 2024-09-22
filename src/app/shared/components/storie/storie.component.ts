@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 
 @Component({
   selector: 'app-storie',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './storie.component.css'
 })
 export class StorieComponent {
-
+  @Input() name:string = '';
+  @Input() img:string = '';
 }

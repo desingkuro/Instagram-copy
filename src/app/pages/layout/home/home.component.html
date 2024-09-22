@@ -33,43 +33,37 @@
     <main>
       <div class="feed">
         <header class="stories">
-          <app-storie/>
+          @for (friend of friendsList; track friend.name) {
+          <app-storie [img]="friend.story.image" [name]="friend.name" />
+          }
         </header>
         @for (friend of friendsList; track friend.name) { @for (post of
         friend.posts; track post.caption) {
-            <app-post
-            [coments]="post.comments"
-            [likes]="post.likes"
-            [img]="post.image"
-            [userName]="friend.name"
-            [imgUser]="friend.profile_picture"
-            />
+        <app-post
+          [coments]="post.comments"
+          [likes]="post.likes"
+          [img]="post.image"
+          [userName]="friend.name"
+          [imgUser]="friend.profile_picture"
+        />
         } }
       </div>
     </main>
+
     <aside>
       <div class="profile__info">
         <img src="https://via.placeholder.com/60" alt="User Profile" />
         <div class="profile__details">
-          <p><strong>usuario_actual</strong></p>
-          <p>Nombre de Usuario</p>
+          <p><strong>Anmalima</strong></p>
+          <p>Andres Licona</p>
         </div>
       </div>
 
       <div class="suggestions">
         <p>Sugerencias para ti</p>
-        <div class="suggestion">
-          <img src="https://via.placeholder.com/40" alt="Suggestion Profile" />
-          <p>Usuario 1</p>
-        </div>
-        <div class="suggestion">
-          <img src="https://via.placeholder.com/40" alt="Suggestion Profile" />
-          <p>Usuario 2</p>
-        </div>
-        <div class="suggestion">
-          <img src="https://via.placeholder.com/40" alt="Suggestion Profile" />
-          <p>Usuario 3</p>
-        </div>
+        @for (friend of friendsList; track $index) {
+        <app-suggestion [img]="friend.profile_picture" [name]="friend.name"/>
+        }
       </div>
     </aside>
   </section>
